@@ -39,6 +39,7 @@ public class MicrostreamService {
 
     public void addNewItem(String text) {
         root().items().add(text);
+        storageManager.store(root().items());
     }
 
     public boolean deleteItem(int index) {
